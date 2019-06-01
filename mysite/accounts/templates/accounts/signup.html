@@ -1,0 +1,25 @@
+{% extends 'movie/base.html' %}
+    
+{% block title %}회원가입{% endblock %}
+
+
+{% block content %}
+    <h2>회원가입</h2>
+    <form method="POST" action="{%url 'signup'%}">
+    {% csrf_token %}
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input name="username" type="text"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input name="password1" type="password"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input name="password2" type="password"></td>
+        </table>
+        <input type="submit" class="btn btn-primary" value="회원가입">
+    </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'movie/index.html' %}
+
+{% block title %}예매하기{% endblock %}
+
+
+{% block content %}
+    <div class="process">
+        <strong>영화선택</strong><span class="process"> > 날짜선택 > 시간선택 > 좌석선택 > 확인 > 결제 > 예매완료</span>
+    </div>
+    <div>
+        <select name="movie">
+            <option value="">선택</option>
+            {% for movie in movies %}
+                <option value="{{ movie.movieId }}">{{ movie.movieName }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <input type="button" value="다음">
+{% endblock %}

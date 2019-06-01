@@ -1,0 +1,21 @@
+{% extends 'movie/base.html' %}
+
+{% block title %}로그인{% endblock %}
+
+
+{% block content %}
+    <h2>로그인</h2>
+    <form method="POST" action="{% url 'signin'%}">
+    {% csrf_token %}
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input name="username" type="text"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input name="password" type="password"></td>
+        </table>
+        <input type="submit" value="로그인">
+    </form>
+{% endblock %}
