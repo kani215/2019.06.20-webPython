@@ -1,48 +1,12 @@
-<!DOCTYPE html>
+<div class="container">
+  <div class="mahiman"></div>
+  <canvas id="rain"></canvas>
+  <div class="Logo">
+    <img src="https://fanart.tv/fanart/movies/299534/hdmovielogo/avengers-infinity-war---part-ii-5c12c9cb63356.png" width="350">
+    <p>KANIWEB</p>
+  </div>
+<script type="text/javascript" src="styple.js"></script>
+<link rel="stylesheet" href="style.css">
+  
+</div>
 
-{% load static %}
-<html lang="ko_KR">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}베이스{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'movie/css/base.css' %}">
-</head>
-<body>
-    <div class="frame">
-        <div class="header">
-            <div class="logo">영화예매</div>
-                {% if user.is_active %}
-                    <a href="/accounts/logout" class="userInfo">로그아웃</a>
-                    <a href="/accounts/myhistory" class="userInfo">{{ user.username }}님</a>
-                {% else %}
-                    <a href="/accounts/signup" class="userInfo">회원가입</a>
-                    <a href="/accounts/login" class="userInfo">로그인</a>
-                {% endif %}
-        </div>
-        <!-- // header-->
-        <div class="container">
-            <div class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="/" class="nav-link">예매 홈</a></li>
-                    <li class="nav-item"><a href="/reservation" class="nav-link">예매하기</a></li>
-                    <li class="nav-item"><a href="/movieIssue" class="nav-link">영화소식</a></li>
-                    <li class="nav-item"><a href="/myhistory" class="nav-link">예매내역</a></li>
-                </ul>
-            </div>
-            <!-- //nav -->
-            <div class="content" name="content">
-                {% block content %}
-                base
-                {% endblock %}
-            </div>
-        </div>
-        <!-- //container -->
-        <div class="footer">
-            <p class="copyright">&copy;</p>
-        </div>
-        <!-- //footer -->
-    </div>
-    <!-- //frame -->
-
-</body>
-</html>

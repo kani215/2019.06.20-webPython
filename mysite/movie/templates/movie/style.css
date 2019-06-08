@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Meddon');
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Meddon', cursive;
+  color:#fff;
+}
+.Logo p {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    font-size: 22px;
+}
+.container {
+  background: #000;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 200;
+}
+/*명암 반전효과를 사용한 웹을 긁어옴*/
+.mahiman {
+  background: #000 url(https://fanart.tv/detailpreview/fanart/movies/299534/moviebackground/avengers-endgame-5c95cc0886c14.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.container .mahiman {
+  -webkit-transition: ease-out 250ms;
+  transition: ease-out 250ms;
+  -webkit-animation: lightning 6000ms infinite;
+          animation: lightning 6000ms infinite;
+}
+/*깜빡임을 주는 효과임 %는 시간대 이므로 시간대를 길게 늘리려면 수 조절해야할것*/
+@-webkit-keyframes lightning {
+  0%,100% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  8% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  9.5% {
+    -webkit-filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+            filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+  }
+  10% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  73% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  75% {
+    -webkit-filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+            filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+  }
+  77% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  80% {
+    -webkit-filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+            filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+  }
+  90% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+}
+
+@keyframes lightning {
+  0%,100% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  8% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  9.5% {
+    -webkit-filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+            filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+  }
+  10% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  73% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  75% {
+    -webkit-filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+            filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+  }
+  77% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+  80% {
+    -webkit-filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+            filter: opacity(1) grayscale(0%) contrast(1) brightness(1);
+  }
+  90% {
+    -webkit-filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+            filter: opacity(0.5) grayscale(80%) contrast(4) brightness(0.2);
+  }
+}
+.Logo {
+    position: fixed;
+    left: 35%;
+    z-index: 999;
+    bottom: 10%;
+}
